@@ -7,8 +7,8 @@ fun main(args: Array<String>) {
     val remainingSeconds: Int
     val remainingMinutes: Int
 
-    minutes = (seconds / 60).toString().padStart(2, '0').toInt()
-    hours = (minutes / 60).toString().padStart(2, '0').toInt()
+    minutes = seconds / 60
+    hours = minutes / 60
     remainingMinutes = minutes % 60
     remainingSeconds = seconds % 60
 
