@@ -1,6 +1,6 @@
 package lesson_02
 
-fun main(args: Array<String>) {
+fun main() {
     val studentOne = 3
     val studentTwo = 4
     val studentThree = 3
