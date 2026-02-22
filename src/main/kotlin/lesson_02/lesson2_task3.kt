@@ -1,6 +1,6 @@
 package lesson_02
 
-fun main(args: Array<String>) {
+fun main() {
     val departureHour = 9
     val departureMinutes = 39
     val trainTravelTime = 457
