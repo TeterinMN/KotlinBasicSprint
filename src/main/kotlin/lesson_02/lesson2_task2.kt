@@ -1,6 +1,6 @@
 package lesson_02
 
-fun main(args: Array<String>) {
+fun main() {
     val employees = 50
     val interns = 30
     val employeesSalary = 30_000
