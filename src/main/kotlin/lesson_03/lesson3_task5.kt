@@ -2,14 +2,13 @@ package lesson_03
 
 fun main() {
     val incomingString = "D2-D4;0"
+    val (fromWhere, toWhere, moveNumber) = incomingString.split('-', ';', limit = 3)
 
-    val fromWhere = incomingString.substringBefore("-")
-    val toWhere = incomingString.substringAfter("-").substringBefore(";")
-    val moveNumber = incomingString.substringAfter(";").toInt()
-
-    println("""
+    println(
+        """
          $fromWhere 
          $toWhere 
          $moveNumber
-    """.trimIndent())
+    """.trimIndent()
+    )
 }
