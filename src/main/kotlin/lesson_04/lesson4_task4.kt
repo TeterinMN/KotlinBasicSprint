@@ -1,7 +1,7 @@
 package lesson_04
 
 fun main() {
-    val day = 4
+    val day = 5
     val isEven = day % 2 == 0
     println(
         """
