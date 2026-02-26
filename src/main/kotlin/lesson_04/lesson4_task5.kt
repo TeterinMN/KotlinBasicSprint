@@ -16,11 +16,9 @@ fun main() {
     val favorableWeather = readln().toBoolean()
 
     val result =
-        (damage == DAMAGE && favorableWeather == FAVORABLE_WEATHER)
-                && (crew >= MIN_CREW && crew <= MAX_CREW)
-                    && (provisions > PROVISIONS)
-                || (damage != DAMAGE && favorableWeather == FAVORABLE_WEATHER)
-                    && (crew == MAX_CREW && provisions >= PROVISIONS)
+        (damage == DAMAGE && favorableWeather == FAVORABLE_WEATHER) &&
+                (crew >= MIN_CREW && crew <= MAX_CREW) && (provisions > PROVISIONS) ||
+                (damage != DAMAGE && favorableWeather == FAVORABLE_WEATHER) && (crew == MAX_CREW && provisions >= PROVISIONS)
 
     println(result)
 
