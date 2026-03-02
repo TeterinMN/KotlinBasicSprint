@@ -13,6 +13,8 @@ fun main() {
         print("Введите пароль: ")
         val passwd = readln()
     } while (login != userLogin || passwd != userPasswd)
+        println("Авторизация прошла успешно")
+
 
 //    while (true) {
 //        print("Для авторизации введите логин: ")
