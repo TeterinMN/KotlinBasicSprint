@@ -14,11 +14,11 @@ fun main() {
     val weight = readln().toFloat()
 
     val bmi = weight / (height / 100.0).pow(2.0)
-    val result = if (bmi < MIN_NORMAL_WEIGHT) "${"%.2f".format(bmi)} < $MIN_NORMAL_WEIGHT: Недостаточная масса тела"
-    else if (bmi in MIN_NORMAL_WEIGHT..<MAX_NORMAL_WEIGHT) "$MIN_NORMAL_WEIGHT <= ${"%.2f".format(bmi)} < ${MAX_NORMAL_WEIGHT.toInt()}: Нормальная масса тела"
-    else if (bmi in MAX_NORMAL_WEIGHT..<OVERWEIGHT) "$MAX_NORMAL_WEIGHT <= ${"%.2f".format(bmi)} < ${OVERWEIGHT.toInt()}: Избыточная масса тела"
-    else "${"%.2f".format(bmi)} > ${OVERWEIGHT.toInt()}: Ожирение"
-
+    val result = when {
+        bmi <= MIN_NORMAL_WEIGHT -> "Недостаточная масса тела"
+        bmi <= MAX_NORMAL_WEIGHT -> "Нормальная масса тела"
+        bmi <= OVERWEIGHT -> "Избыточная масса тела"
+        else -> "Ожирение"
+    }
     println(result)
-
 }
