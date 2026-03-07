@@ -1,7 +1,7 @@
 package lesson_05
 
-const val USER_LOGIN = "Zaphod"
-const val USER_PASSWORD = "PanGalactic"
+private const val USER_LOGIN = "Zaphod"
+private const val USER_PASSWORD = "PanGalactic"
 
 fun main() {
 	print("Введите ваш логин: ")

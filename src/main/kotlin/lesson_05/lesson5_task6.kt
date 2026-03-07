@@ -2,9 +2,9 @@ package lesson_05
 
 import kotlin.math.pow
 
-const val MIN_NORMAL_WEIGHT = 18.5
-const val MAX_NORMAL_WEIGHT = 25.0
-const val OVERWEIGHT = 30.0
+private const val MIN_NORMAL_WEIGHT = 18.5
+private const val MAX_NORMAL_WEIGHT = 25.0
+private const val OVERWEIGHT = 30.0
 
 fun main() {
     print("Введите свой рост: >> ")

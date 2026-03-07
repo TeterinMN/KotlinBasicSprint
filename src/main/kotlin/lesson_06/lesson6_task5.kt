@@ -1,9 +1,9 @@
 package lesson_06
 
-const val MIN_NUMBER = 1
-const val MAX_NUMBER = 9
-const val CAPTCHA_ATTEMPTS_COUNT = 3
-const val ZERO_ATTEMPTS = 0
+private const val MIN_NUMBER = 1
+private const val MAX_NUMBER = 9
+private const val CAPTCHA_ATTEMPTS_COUNT = 3
+private const val ZERO_ATTEMPTS = 0
 
 fun main() {
     var counter = CAPTCHA_ATTEMPTS_COUNT

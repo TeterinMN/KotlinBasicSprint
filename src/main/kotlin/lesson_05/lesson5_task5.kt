@@ -1,7 +1,7 @@
 package lesson_05
 
-const val MIN_NUMBER = 0
-const val MAX_NUMBER = 42
+private const val MIN_NUMBER = 0
+private const val MAX_NUMBER = 42
 private const val JACKPOT_MATCHES = 3
 private const val MAIN_PRIZE_MATCHES = 2
 private const val CONSOLATION_PRIZE_MATCHES = 1

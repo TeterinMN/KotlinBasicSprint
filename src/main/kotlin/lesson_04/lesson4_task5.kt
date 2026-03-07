@@ -1,10 +1,10 @@
 package lesson_04
 
-const val DAMAGE = false
-const val PROVISIONS = 50
-const val MIN_CREW = 55
-const val MAX_CREW = 70
-const val FAVORABLE_WEATHER = true
+private const val DAMAGE = false
+private const val PROVISIONS = 50
+private const val MIN_CREW = 55
+private const val MAX_CREW = 70
+private const val FAVORABLE_WEATHER = true
 fun main() {
     print("Наличие повреждений корпуса (true/false): ")
     val damage = readln().toBoolean()

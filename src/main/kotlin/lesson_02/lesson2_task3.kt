@@ -1,5 +1,5 @@
 package lesson_02
-const val MINUTES_IN_HOUR = 60
+private const val MINUTES_IN_HOUR = 60
 fun main() {
     val departureHour = 9
     val departureMinutes = 39

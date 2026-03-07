@@ -2,7 +2,7 @@ package lesson_05
 
 import java.util.Calendar
 
-const val LEGAL_ADULT_AGE = 18
+private const val LEGAL_ADULT_AGE = 18
 fun main() {
 	val currentYear = Calendar.getInstance().get(Calendar.YEAR)
 

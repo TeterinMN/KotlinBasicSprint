@@ -1,9 +1,9 @@
 package lesson_04
 
-const val IS_SUNNY = true
-const val IS_AWNING_OPEN = true
-const val AIR_HUMIDITY = 20
-const val SEASON = "Зима"
+private const val IS_SUNNY = true
+private const val IS_AWNING_OPEN = true
+private const val AIR_HUMIDITY = 20
+private const val SEASON = "Зима"
 
 fun main() {
     val isSunny = true

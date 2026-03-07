@@ -1,7 +1,7 @@
 package lesson_05
 
-const val MIN_VALUE = 0
-const val MAX_VALUE = 42
+private const val MIN_VALUE = 0
+private const val MAX_VALUE = 42
 fun main() {
     val numberOne = 5
     val numberTwo = 17

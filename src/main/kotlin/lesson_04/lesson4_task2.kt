@@ -1,8 +1,8 @@
 package lesson_04
 
-const val MIN_WEIGHT = 35
-const val MAX_WEIGHT = 100
-const val MAX_VOLUME = 100
+private const val MIN_WEIGHT = 35
+private const val MAX_WEIGHT = 100
+private const val MAX_VOLUME = 100
 
 fun main() {
     val cargoWeight = 50

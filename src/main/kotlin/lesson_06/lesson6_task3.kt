@@ -1,7 +1,7 @@
 package lesson_06
 
-const val STOP_TIMER = 0
-const val TIMER_DELAY = 1000
+private const val STOP_TIMER = 0
+private const val TIMER_DELAY = 1000
 
 fun main() {
 	print("Введите количество секунд таймера: ")
