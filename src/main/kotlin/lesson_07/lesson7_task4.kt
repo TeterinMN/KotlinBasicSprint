@@ -3,11 +3,10 @@ package lesson_07
 fun main() {
     print("Введите время таймера в секундах: ")
     val userInput = readln().toInt()
-    var endTimer = userInput
-    for (i in 1..userInput) {
-        print("$endTimer ")
+
+    for (i in userInput downTo 1) {
+        print("$i ")
         Thread.sleep(1000)
-        --endTimer
     }
     print("- Время вышло")
 }
