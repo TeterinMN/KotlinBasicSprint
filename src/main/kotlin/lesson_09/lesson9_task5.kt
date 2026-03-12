@@ -4,7 +4,7 @@ const val LIMIT_INGREDIENTS = 5
 
 fun main() {
     val ingredients = mutableListOf<String>()
-    println("Введите 5 названий ингредиентов: ")
+    println("Введите $LIMIT_INGREDIENTS названий ингредиентов: ")
     var counter = 0
     while (ingredients.size < LIMIT_INGREDIENTS) {
         counter++
