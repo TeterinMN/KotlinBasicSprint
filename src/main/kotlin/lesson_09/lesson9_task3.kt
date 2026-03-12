@@ -13,10 +13,3 @@ fun main() {
 
     println("Для $numberOfServings порций вам понадобится: ${resultIngredients.joinToString(", ")}")
 }
-
-
-//    for (i in numberOfIngredients.indices) {
-//        numberOfIngredients[i] = numberOfIngredients[i] * numberOfServings
-//    }
-// или
-//    numberOfIngredients.replaceAll {it * numberOfServings}
