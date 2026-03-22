@@ -1,7 +1,7 @@
 package lesson_08
 
 fun main() {
-    val viewsArray = intArrayOf(0, 0, 0, 0, 0, 0, 0)
+    val viewsArray = IntArray(7)
     val daysOfWeekArray = arrayOf("Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье")
     for (i in viewsArray.indices) {
         print("Введите количество просмотров в ${daysOfWeekArray[i]}: ")
