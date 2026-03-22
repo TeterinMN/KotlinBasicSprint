@@ -6,9 +6,9 @@ fun main() {
 
     print("Введите название ингредиента который необходимо заменить: ")
     val userInput = readln()
-    val resultFind = ingredientsArray.contains(userInput)
+
     val indexFind = ingredientsArray.indexOf(userInput)
-    if (resultFind) {
+    if (indexFind >= 0) {
         print("Введите название нового ингредиента: ")
         val newIngredients = readln()
         ingredientsArray[indexFind] = newIngredients
