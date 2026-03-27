@@ -9,6 +9,7 @@ package lesson_10
  */
 
 const val LENGTH_USERNAME_PASSWORD = 4
+
 fun main() {
     println("Для регистрации в приложении придумайте логин и пароль")
     print("Логин: ")
@@ -16,11 +17,11 @@ fun main() {
     print("Пароль: ")
     val userPassword = readln()
 
-    println(lengthValidationUserInput(userName, userPassword))
+    if (checkPasswordLength(userName, userPassword)) {
+        println("Добро пожаловать")
+    } else println("Логин или пароль недостаточно длинные")
 }
 
-fun lengthValidationUserInput(name: String, password: String): String {
-    if (name.length <= LENGTH_USERNAME_PASSWORD || password.length <= LENGTH_USERNAME_PASSWORD) {
-        return "Логин или пароль недостаточно длинные"
-    } else return "Успешная регистрация"
+fun checkPasswordLength(name: String, password: String): Boolean {
+    return !(name.length < LENGTH_USERNAME_PASSWORD || password.length < LENGTH_USERNAME_PASSWORD)
 }
