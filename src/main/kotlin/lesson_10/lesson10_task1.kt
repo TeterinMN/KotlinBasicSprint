@@ -12,28 +12,18 @@ package lesson_10
 
 
 fun main() {
-    val humanDice = listOf(rollOfGameDice(), rollOfGameDice())
-    val computerDice = listOf(rollOfGameDice(), rollOfGameDice())
+    val humanDice = rollDice()
+    val computerDice = rollDice()
 
-    println("Человек выбросил: ${humanDice.joinToString { it.toString() }}")
-    val resultHuman = countingTheThrow(humanDice[0], humanDice[1])
+    println("Человек выбросил: $humanDice")
+    println("Компьютер выбросил: $computerDice")
 
-    println("Компьютер выбросил: ${computerDice.joinToString { it.toString() }}")
-    val resultComputer = countingTheThrow(computerDice[0], computerDice[1])
-
-    println(determiningTheWinner(resultComputer, resultHuman))
+    println(determineWinner(computerDice, humanDice))
 }
 
-fun rollOfGameDice(): Int {
-    return (1..6).random()
-}
+fun rollDice(): Int = (1..6).random()
 
-fun countingTheThrow(numberOne: Int, numberTwo: Int): Int {
-    val result = numberOne + numberTwo
-    return result
-}
-
-fun determiningTheWinner(numberComputer: Int, numberHuman: Int): String {
+fun determineWinner(numberComputer: Int, numberHuman: Int): String {
     if (numberComputer == numberHuman) {
         return "Победила дружба"
     } else if (numberComputer < numberHuman) {
