@@ -17,11 +17,11 @@ fun main() {
     print("Пароль: ")
     val userPassword = readln()
 
-    if (checkPasswordLength(userName, userPassword)) {
+    if (validateInputLength(userName, userPassword)) {
         println("Добро пожаловать")
     } else println("Логин или пароль недостаточно длинные")
 }
 
-fun checkPasswordLength(name: String, password: String): Boolean {
-    return !(name.length < LENGTH_USERNAME_PASSWORD || password.length < LENGTH_USERNAME_PASSWORD)
+fun validateInputLength(name: String, password: String): Boolean {
+    return name.length >= LENGTH_USERNAME_PASSWORD && password.length >= LENGTH_USERNAME_PASSWORD
 }
