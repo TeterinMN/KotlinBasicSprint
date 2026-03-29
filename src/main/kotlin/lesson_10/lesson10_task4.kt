@@ -31,7 +31,7 @@ fun main() {
         }
 
         print("Хотите бросить кости еще раз? (Введите Да или Нет): ")
-        val answer = readln()
+        var answer = readln()
         if (answer.equals("Да", ignoreCase = true)) {
             continue
         } else if (answer.equals("Нет", ignoreCase = true)) {
@@ -39,7 +39,8 @@ fun main() {
             println("Вы выиграли $humanWins партий")
             break
         } else {
-            println("Некорректный ввод. Пожалуйста, введите Да или Нет.")
+            print("Некорректный ввод. Пожалуйста, введите Да или Нет: ")
+            answer = readln()
         }
     } while (true)
 }
