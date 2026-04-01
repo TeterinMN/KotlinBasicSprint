@@ -27,8 +27,10 @@ fun main() {
     val userLogin = readln()
     print("Введите пароль: ")
     val userPassword = readln()
-    val token = authenticateUser(userLogin, userPassword).toString()
-    println(getUserCart(token))
+    val token = authenticateUser(userLogin, userPassword)
+    if (token != null) {
+        println(getUserCart())
+    } else println("Ошибка аутентификации")
 }
 
 fun authenticateUser(login: String, password: String): String? {
@@ -45,8 +47,7 @@ fun authenticateUser(login: String, password: String): String? {
     return null
 }
 
-fun getUserCart(token: String?): String {
+fun getUserCart(): List<String> {
     val cart = listOf("Корпус", "Блок питания", "Материнская плата", "Видеокарта")
-    if (token == "null") return "Ошибка аутентификации"
-    return cart.joinToString(", ")
+    return cart
 }
