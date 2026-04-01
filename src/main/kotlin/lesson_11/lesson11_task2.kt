@@ -1,10 +1,10 @@
 package lesson_11
 
 class User2 (
-    var id: Int,
-    var login: String,
+    val id: Int,
+    val login: String,
     var password: String,
-    var email: String,
+    val email: String,
     var bio: String = "",
 ) {
     fun printInfoUser() {
@@ -22,6 +22,7 @@ class User2 (
         if (password == answerUser) {
             print("Введите новый пароль: ")
             password = readln()
+            println("Пароль успешно изменен")
         } else println("Вы ошиблись. Программа завершена")
     }
 }
