@@ -1,39 +1,49 @@
 package lesson_11
 
 fun main() {
-    val socialRoom = SocialNetworkRoom("Общество", "Картинка", listUser = mutableListOf("Scorpio"))
+    val socialRoom = SocialNetworkRoom("Общество", "Картинка")
+    val user1 = Participant("Scorpio", "eagle", "Свободен")
+    val user2 = Participant("Lion", "lion", "Разговаривает по телефону")
+    socialRoom.addUser(user1)
+    socialRoom.addUser(user2)
     println(socialRoom.printData())
+    socialRoom.setStatus("Lion", "пользователь заглушен")
+    println(socialRoom.printData())
+    socialRoom.setStatus("Орёл", "Свободен")
 
-    socialRoom.addUser()
-    println(socialRoom.printData())
-
-    socialRoom.setStatus()
-    println(socialRoom.printData())
 }
 
 class SocialNetworkRoom(
     val title: String,
     val cover: String,
-    var status: String = "",
-    val listUser: MutableList<String> = mutableListOf()
+    val participants: MutableList<Participant> = mutableListOf(),
 ) {
 
-    fun addUser() {
+    fun addUser(participant: Participant) {
         println("Добавление пользователя в комнату")
-        print("Придумайте ник: ")
-        listUser.add(readln())
+        participants.add(participant)
     }
 
-    fun setStatus() {
-        print("Введите пользователя для смены статуса: ")
-        val answerUser = readln()
-        if (answerUser in listUser) {
-            print("Установить статус: ")
-            status = readln()
-        } else println("Нет такого пользователя")
+    fun setStatus(nickname: String, newStatus: String) {
+        val user = participants.find { it.nickname == nickname }
+        if (user != null) {
+            user.status = newStatus
+            println("Статус успешно изменен для пользователя ${user.nickname}")
+        } else {
+            println("Статус не подлежит изменению. Указанного пользователя не существует.")
+        }
     }
 
     fun printData(): String {
-        return  "Комната: $title, Обложка: $cover, Статус: $status, Пользователи: ${listUser.joinToString(", ")}"
+        val users = participants.joinToString(", ") {
+            "(${it.nickname}, Avatar: ${it.avatar}, Статус: ${it.status})"
+        }
+        return "Комната: $title, Обложка: $cover, Пользователи: $users"
     }
 }
+
+class Participant(
+    val nickname: String,
+    val avatar: String,
+    var status: String = "",
+)
