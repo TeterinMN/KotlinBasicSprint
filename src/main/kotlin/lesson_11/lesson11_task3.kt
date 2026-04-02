@@ -1,7 +1,7 @@
 package lesson_11
 
 fun main() {
-    val socialRoom = SocialNetworkRoom("Общество", "Картинка")
+    val socialRoom = SocialNetworkRoom("Общество", "cover_image.png")
     val user1 = Participant("Scorpio", "eagle", "Свободен")
     val user2 = Participant("Lion", "lion", "Разговаривает по телефону")
     socialRoom.addUser(user1)
@@ -45,5 +45,5 @@ class SocialNetworkRoom(
 class Participant(
     val nickname: String,
     val avatar: String,
-    var status: String = "",
+    var status: String,
 )
