@@ -5,8 +5,8 @@ fun main() {
 }
 
 class RecipeCategory(
-    val id : Int,
-    val categoryName : String,
+    val id: Int,
+    val categoryName: String,
     val imageUrl: String,
 )
 
@@ -24,6 +24,7 @@ class Recipe(
     val imageUrl: String,
     val ingredients: List<Ingredient>,
     val description: String,
+    val cookMethod: List<String>,
     val numberServings: Int,
-    val isFavorite : Boolean = false,
+    val isFavorite: Boolean = false,
 )
