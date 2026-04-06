@@ -8,6 +8,7 @@ class RecipeCategory(
     val id: Int,
     val categoryName: String,
     val imageUrl: String,
+    val description: String,
 )
 
 class Ingredient(
