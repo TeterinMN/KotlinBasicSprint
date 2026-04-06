@@ -1,7 +1,7 @@
 package lesson_12
 
 fun main() {
-    val today = WeatherTwo(25.0, 20.0)
+    val today = WeatherTwo(25.0, 20.0, false)
     val tomorrow = WeatherTwo(30.0, 15.0, true)
 
     today.printResult()
@@ -9,16 +9,16 @@ fun main() {
 }
 
 class WeatherTwo(
-    var dayTemperature: Double,
-    var nightTemperature: Double,
-    var fallout: Boolean = false,
+    val dayTemperature: Double,
+    val nightTemperature: Double,
+    val isPrecipitation: Boolean,
 ) {
     fun printResult() {
         println(
             """
             Дневная температура: $dayTemperature
             Ночная температура: $nightTemperature
-            Осадки: $fallout
+            Осадки: $isPrecipitation
         """.trimIndent()
         )
     }
