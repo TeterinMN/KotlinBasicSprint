@@ -23,11 +23,13 @@ class Weather {
     var nightTemperature: Double = 10.0
     var fallout: Boolean = false
 
-    fun printResult () {
-        println("""
+    fun printResult() {
+        println(
+            """
             Дневная температура: $dayTemperature
             Ночная температура: $nightTemperature
             Осадки: $fallout
-        """.trimIndent())
+        """.trimIndent()
+        )
     }
 }
