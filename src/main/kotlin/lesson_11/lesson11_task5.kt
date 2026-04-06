@@ -64,13 +64,13 @@ class ForumMessage(
     val message: String,
 ) {
     class Builder {
-        var id: Int = 0
+        var authorId: Int = 0
         var message: String = ""
-        fun setAuthorId(authorId: Int) = apply { this.id = authorId }
+        fun setAuthorId(authorId: Int) = apply { this.authorId = authorId }
         fun setMessage(message: String) = apply { this.message = message }
 
         fun build(): ForumMessage {
-            return ForumMessage(id, message)
+            return ForumMessage(authorId, message)
         }
     }
 
