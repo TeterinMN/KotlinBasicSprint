@@ -6,16 +6,10 @@ fun main() {
 
 }
 
-class WeatherThree() {
-    var dayTempCelsius = 0
-    var nightTempCelsius = 0
-    var isPrecipitation = false
-
-    constructor(dayTempKelvin: Int, nightTempKelvin: Int, isPrecipitation: Boolean) : this() {
-        this.dayTempCelsius = dayTempKelvin - 273
-        this.nightTempCelsius = nightTempKelvin - 273
-        this.isPrecipitation = isPrecipitation
-    }
+class WeatherThree(dayTempKelvin: Int, nightTempKelvin: Int, hasPrecipitation: Boolean) {
+    var dayTempCelsius = dayTempKelvin - 273
+    var nightTempCelsius = nightTempKelvin - 273
+    var isPrecipitation = hasPrecipitation
 
     fun printResult() {
 
