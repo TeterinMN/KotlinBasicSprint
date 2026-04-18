@@ -1,23 +1,24 @@
 package lesson_12
 
+const val KELVIN_TO_CELSIUS = 273
+
 fun main() {
-    WeatherFour(300, 220, true)
+    WeatherFour(280, 260, true)
 }
 
-class WeatherFour() {
-    var dayTempCelsius = 0
-    var nightTempCelsius = 0
-    var isPrecipitation = false
+class WeatherFour(
+    var dayTempCelsius: Int,
+    var nightTempCelsius: Int,
+    var isPrecipitation: Boolean = false,
+) {
 
-    constructor(dayTempKelvin: Int, nightTempKelvin: Int, isPrecipitation: Boolean) : this() {
-        this.dayTempCelsius = dayTempKelvin - 273
-        this.nightTempCelsius = nightTempKelvin - 273
-        this.isPrecipitation = isPrecipitation
+    init {
+        dayTempCelsius -= KELVIN_TO_CELSIUS
+        nightTempCelsius -= KELVIN_TO_CELSIUS
         printResult()
     }
 
     fun printResult() {
-
         println(
             """
             Дневная температура: $dayTempCelsius
