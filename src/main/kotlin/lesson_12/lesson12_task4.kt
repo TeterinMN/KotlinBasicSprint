@@ -7,22 +7,22 @@ fun main() {
 }
 
 class WeatherFour(
-    var dayTempCelsius: Int,
-    var nightTempCelsius: Int,
+    var dayTempKelvin: Int,
+    var nightTempKelvin: Int,
     var isPrecipitation: Boolean = false,
 ) {
 
     init {
-        dayTempCelsius -= KELVIN_TO_CELSIUS
-        nightTempCelsius -= KELVIN_TO_CELSIUS
+        dayTempKelvin -= KELVIN_TO_CELSIUS
+        nightTempKelvin -= KELVIN_TO_CELSIUS
         printResult()
     }
 
     fun printResult() {
         println(
             """
-            Дневная температура: $dayTempCelsius
-            Ночная температура: $nightTempCelsius
+            Дневная температура: $dayTempKelvin
+            Ночная температура: $nightTempKelvin
             Осадки: $isPrecipitation
         """.trimIndent()
         )
