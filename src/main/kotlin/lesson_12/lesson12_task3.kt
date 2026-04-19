@@ -7,9 +7,9 @@ fun main() {
 }
 
 class WeatherThree(dayTempKelvin: Int, nightTempKelvin: Int, hasPrecipitation: Boolean) {
-    var dayTempCelsius = dayTempKelvin - 273
-    var nightTempCelsius = nightTempKelvin - 273
-    var isPrecipitation = hasPrecipitation
+    val dayTempCelsius = dayTempKelvin - 273
+    val nightTempCelsius = nightTempKelvin - 273
+    val isPrecipitation = hasPrecipitation
 
     fun printResult() {
 
