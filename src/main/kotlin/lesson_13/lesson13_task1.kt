@@ -1,6 +1,5 @@
 package lesson_13
 
-
 fun main() {
     val phoneBook = Contact("Михаил", 89963153333)
     phoneBook.printContact()
