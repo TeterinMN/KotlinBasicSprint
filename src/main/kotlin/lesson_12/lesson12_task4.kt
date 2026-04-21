@@ -3,26 +3,26 @@ package lesson_12
 const val KELVIN_TO_CELSIUS = 273
 
 fun main() {
-    WeatherFour(280, 260, true)
+    WeatherFour(230, 228, true)
 }
 
 class WeatherFour(
-    var dayTempKelvin: Int,
-    var nightTempKelvin: Int,
-    var isPrecipitation: Boolean = false,
+    dayTempKelvin: Int,
+    nightTempKelvin: Int,
+    val isPrecipitation: Boolean = false,
 ) {
+    val dayTempCelsius = dayTempKelvin - KELVIN_TO_CELSIUS
+    val nightTempCelsius = nightTempKelvin - KELVIN_TO_CELSIUS
 
     init {
-        dayTempKelvin -= KELVIN_TO_CELSIUS
-        nightTempKelvin -= KELVIN_TO_CELSIUS
         printResult()
     }
 
     fun printResult() {
         println(
             """
-            Дневная температура: $dayTempKelvin
-            Ночная температура: $nightTempKelvin
+            Дневная температура: $dayTempCelsius
+            Ночная температура: $nightTempCelsius
             Осадки: $isPrecipitation
         """.trimIndent()
         )
