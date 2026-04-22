@@ -11,9 +11,8 @@ fun main() {
 class ContactInfo(
     val name: String,
     val phone: Long,
-    val company: String?,
+    val company: String? = null,
 ) {
-    constructor(name: String, phone: Long) : this(name, phone, null)
 
     fun printContact() {
         println("Имя: $name\nНомер: $phone\nКомпания: ${company ?: "<не указано>"}\n------------------------------")
