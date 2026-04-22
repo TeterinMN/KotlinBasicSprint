@@ -9,16 +9,15 @@ fun main() {
         ContactInfo("Тимур", 89139137333, "null"),
     )
 
-    val company = contacts.mapNotNull { it.company }
-    println("СПИСОК КОМПАНИЙ:\n${company.joinToString(",\n")}")
+    val phoneBookCompanies = contacts.mapNotNull { it.company }
+    println("СПИСОК КОМПАНИЙ:\n${phoneBookCompanies.joinToString(",\n")}")
 }
 
 class ContactInfo(
     val name: String,
     val phone: Long,
-    val company: String?,
+    val company: String? = null,
 ) {
-    constructor(name: String, phone: Long) : this(name, phone, null)
 
     fun printContact() {
         println("Имя: $name\nНомер: $phone\nКомпания: ${company ?: "<не указано>"}\n------------------------------")
